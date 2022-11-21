@@ -71,7 +71,8 @@ def load_plugin():
 		caption  = "PyQt",
         image = image_path
     )
-    
+    # Changement de dossier de sauvegarde : 
+
     # en cas ou la date est erroné sur le pc
     if date.today().year < 2023 :
         cwd = 'C:\\bac2023'
@@ -80,4 +81,9 @@ def load_plugin():
     if not os.path.exists(cwd):
         os.makedirs(cwd)
     get_workbench().set_local_cwd(cwd)
+
+    # Ne pas ouvrir les derniers fichiers 
+    
+    get_workbench().set_option("file.current_file", None)
+    get_workbench().set_option("file.open_files", None)
     
