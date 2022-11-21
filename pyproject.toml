@@ -1,6 +1,12 @@
 [project]
 name = "thonny-tunisiaschools"
-version = "0.0.2    "
+version = "0.0.2"
+description="A plug-in which offers Tunisian computer science secondary teachers / students some help creating Python & PyQt Applications."
+readme = "README.md"
+requires-python = "3.0.0"
+dependencies = [
+  'thonny>=3.2.1',
+]
 
 [build-system]
 requires = ["setuptools"]
