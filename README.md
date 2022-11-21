@@ -11,3 +11,5 @@ A Thonny plug-in which offers Tunisian computer science secondary teachers / stu
   - adds on new menu (PyQt5) commands to insert call to usual functions ( text , setText , clear , show ) if widget is Label or LineEdit ( as in Tunisian Curriculum )
 
 - changes save location to c:/bac2023 as needed for final exams
+
+- disables opening last open files (to reduce risks of students overwriting other students work)
