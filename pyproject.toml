@@ -8,7 +8,7 @@ dependencies = [
   'thonny>=3.2.1',
 ]
 license ={text = "GPL version 3"}
-authors =[{name = "Selmen Arous",email = "selmen.arous@gmail.com"}]
+authors =[{name = "Selmen Arous", email = "selmen.arous@gmail.com"}]
 keywords=["PyQt" ,"QT" ,"Tunisia" ,"School" ,"Teaching" ,"Education"]
 classifiers=[
         "Environment :: MacOS X",
