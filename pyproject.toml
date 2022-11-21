@@ -1,12 +1,39 @@
 [project]
 name = "thonny-tunisiaschools"
-version = "0.0.2"
+version = "0.0.3"
 description="A plug-in which offers Tunisian computer science secondary teachers / students some help creating Python & PyQt Applications."
 readme = "README.md"
-requires-python = "3.0.0"
+requires-python = ">=3.0"
 dependencies = [
   'thonny>=3.2.1',
 ]
+license ={text = "GPL version 3"}
+authors =[{name = "Selmen Arous",email = "selmen.arous@gmail.com"}]
+keywords=["PyQt" ,"QT" ,"Tunisia" ,"School" ,"Teaching" ,"Education"]
+classifiers=[
+        "Environment :: MacOS X",
+        "Environment :: Win32 (MS Windows)",
+        "Environment :: X11 Applications",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Education",
+        "Intended Audience :: End Users/Desktop",
+        "License :: Freeware",
+        "License :: OSI Approved :: GNU General Public License (GPL)",
+        "Natural Language :: English",
+        "Operating System :: MacOS",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: POSIX",
+        "Operating System :: POSIX :: Linux",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Education",
+        "Topic :: Software Development",
+    ]
 
 [build-system]
 requires = ["setuptools"]
