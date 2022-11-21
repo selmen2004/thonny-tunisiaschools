@@ -83,7 +83,7 @@ def load_plugin():
     get_workbench().set_local_cwd(cwd)
 
     # Ne pas ouvrir les derniers fichiers 
-    
-    get_workbench().set_option("file.current_file", None)
-    get_workbench().set_option("file.open_files", None)
+
+    get_workbench().set_option("file.current_file", "")
+    get_workbench().set_option("file.open_files", "")
     
