@@ -32,6 +32,7 @@ def add_pyqt_code():
             )
     if path:
         get_workbench().get_menu("PyQt5").delete(1, "end")
+        UiViewerPlugin
         file = minidom.parse(path)
         widgets = file.getElementsByTagName('widget')
         for w in widgets:
@@ -60,7 +61,7 @@ app.exec_()'''
 def load_plugin():
     
     
-    image_path = os.path.join(os.path.dirname(__file__), "res", "qt_32.png")
+    image_path = os.path.join(os.path.dirname(__file__), "res", "qt_16.png")
     get_workbench().add_command(
         "selmen_command",
         "PyQt5",
@@ -74,8 +75,8 @@ def load_plugin():
     # Changement de dossier de sauvegarde : 
 
     # en cas ou la date est erroné sur le pc
-    if date.today().year < 2023 :
-        cwd = 'C:\\bac2023'
+    if date.today().year < 2024 :
+        cwd = 'C:\\bac2024'
     else:
         cwd = 'C:\\bac'+str(date.today().year)
     if not os.path.exists(cwd):
@@ -86,4 +87,3 @@ def load_plugin():
 
     get_workbench().set_option("file.current_file", "")
     get_workbench().set_option("file.open_files", "")
-    
