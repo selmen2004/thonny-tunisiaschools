@@ -3,7 +3,7 @@ from datetime import date
 from thonny import get_workbench
 from thonny.languages import tr
 from thonny.ui_utils import select_sequence,askopenfilename
-
+from .UIViewer import UiViewerPlugin
 
 from xml.dom import minidom
 
@@ -32,7 +32,8 @@ def add_pyqt_code():
             )
     if path:
         get_workbench().get_menu("PyQt5").delete(1, "end")
-        UiViewerPlugin
+        get_workbench().get_view("UiViewerPlugin").load_new_ui_file(path)
+        get_workbench().show_view("UiViewerPlugin",True)
         file = minidom.parse(path)
         widgets = file.getElementsByTagName('widget')
         for w in widgets:
@@ -59,6 +60,7 @@ app.exec_()'''
 
 
 def load_plugin():
+    get_workbench().add_view(UiViewerPlugin, tr("QT UI Viewer"), "s")
     
     
     image_path = os.path.join(os.path.dirname(__file__), "res", "qt_16.png")

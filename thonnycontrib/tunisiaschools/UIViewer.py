@@ -6,15 +6,17 @@ from thonny.languages import tr
 
 class UiViewerPlugin(tk.Frame):
     def __init__(self, master):
-        super().__init__(master, columns=())  # Provide empty tuple for columns
+        super().__init__(master)  # Provide empty tuple for columns
         self.ui_file = None  # Store the current UI file path
         self.create_widgets()
 
     def create_widgets(self):
         if self.ui_file:
             if os.path.exists(self.ui_file):
+                self.label_file_name = tk.Label(self, text="Ceçi est un aperçu du fichier : "+self.ui_file, anchor="w")
+                self.label_file_name.pack(fill="x")
                 widgets = self.load_ui_file(self.ui_file)
-                self.create_tkinter_widgets(self, widgets)
+                self.create_tkinter_widgets( widgets)
             else:
                 print(f"File '{self.ui_file}' does not exist.")
         else:
@@ -26,7 +28,9 @@ class UiViewerPlugin(tk.Frame):
         for widget_elem in root.findall(".//widget"):
             class_name = widget_elem.attrib.get("class")
             widget = {"class": class_name}
-            properties = {}
+            
+            name = widget_elem.attrib.get("name")
+            properties = {"name": name}
             for property_elem in widget_elem.findall(".//property"):
                 property_name = property_elem.get("name")
                 if property_name == "geometry":
@@ -49,7 +53,8 @@ class UiViewerPlugin(tk.Frame):
 
             # Extract geometry properties
             x, y, width, height = widget_geometry
-
+            widget_label = tk.Label(self, text=tr("Name") + ": "+properties.get("name") ,  bg="green", fg="white", font=("TkDefaultFont", 8))
+            widget_label.place(x=x, y=y - 20)
             if widget_class == "QLabel":
                 # Create a label with the specified text, geometry, and font
                 label = tk.Label(self, text=widget_text)
@@ -69,10 +74,12 @@ class UiViewerPlugin(tk.Frame):
                 text_edit = tk.Text(self)
                 text_edit.insert(tk.END, widget_text)
                 text_edit.place(x=x, y=y, width=width, height=height)
+    def destroy_widgets(self):
+        for widget in self.winfo_children():
+            widget.destroy()
+        
     def load_new_ui_file(self, new_ui_file):
         self.ui_file = new_ui_file
         self.destroy_widgets()  # Destroy existing widgets
         self.create_widgets()   # Load and create widgets for the new UI file
 
-def load_plugin():
-    get_workbench().add_view(UiViewerPlugin, tr("UI View"), "s")
