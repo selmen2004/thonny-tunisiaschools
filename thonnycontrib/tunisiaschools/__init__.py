@@ -109,14 +109,16 @@ def load_plugin():
     
     
     image_path = os.path.join(os.path.dirname(__file__), "res", "qt_16.png")
+    designer_image_path = os.path.join(os.path.dirname(__file__), "res", "designer_16.png")
+	
     get_workbench().add_command(
         "selmen_command",
         "PyQt5",
         tr("Ajouter code PyQt5"),
         add_pyqt_code,
-		default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
+	default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
         include_in_toolbar = True,
-		caption  = "PyQt",
+	caption  = "PyQt",
         image = image_path
     )
     get_workbench().add_command(
@@ -124,10 +126,10 @@ def load_plugin():
         "PyQt5",
         tr("Ouvrir dans Designer"),
         open_in_designer,
-		default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
+	#default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
         include_in_toolbar = True,
-		caption  = "PyQt",
-        image = image_path
+	caption  = "PyQt",
+        image = designer_image_path
     )
     # Changement de dossier de sauvegarde : 
 
