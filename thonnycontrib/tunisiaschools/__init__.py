@@ -92,7 +92,10 @@ def open_in_designer():
         if os.path.exists(location) or location== "pyqt5_qt5_designer.exe" or location== "designer.exe" :
             try:
                 print("running ", f'"{location}" "{qt_ui_file}"', " ...")
-                os.system(f'"{location}" "{qt_ui_file}"')
+		if qt_ui_file=="":
+			os.system(f'"{location}"')
+		else:
+                	os.system(f'"{location}" "{qt_ui_file}"')
                 return True
             except Exception as e:
                 print(f"Error: {e}")
