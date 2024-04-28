@@ -92,14 +92,13 @@ def open_in_designer():
         if os.path.exists(location) or location== "pyqt5_qt5_designer.exe" or location== "designer.exe" :
             try:
                 print("running ", f'"{location}" "{qt_ui_file}"', " ...")
-		if qt_ui_file=="":
-			os.system(f'"{location}"')
-		else:
-                	os.system(f'"{location}" "{qt_ui_file}"')
-                return True
+                if qt_ui_file=="":
+                    os.system(f'"{location}"')
+                else:
+                    os.system(f'"{location}" "{qt_ui_file}"')
             except Exception as e:
                 print(f"Error: {e}")
-    
+        return True
     print("Error: Designer not found.")
     return False
 
@@ -116,9 +115,9 @@ def load_plugin():
         "PyQt5",
         tr("Ajouter code PyQt5"),
         add_pyqt_code,
-	default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
+	    default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
         include_in_toolbar = True,
-	caption  = "PyQt",
+	    caption  = "PyQt",
         image = image_path
     )
     get_workbench().add_command(
@@ -126,9 +125,9 @@ def load_plugin():
         "PyQt5",
         tr("Ouvrir dans Designer"),
         open_in_designer,
-	#default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
+	    #default_sequence=select_sequence("<Control-Shift-B>", "<Command-Shift-B>"),
         include_in_toolbar = True,
-	caption  = "PyQt",
+	    caption  = "PyQt",
         image = designer_image_path
     )
     # Changement de dossier de sauvegarde : 
