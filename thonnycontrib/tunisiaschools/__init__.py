@@ -2,7 +2,6 @@ import os
 from datetime import date
 from thonny import get_workbench
 from thonny.languages import tr
-from thonny.misc_utils import get_user_site_packages_dir_for_base
 from thonny.ui_utils import select_sequence,askopenfilename
 from .UIViewer import UiViewerPlugin
 
