@@ -1,4 +1,5 @@
 import os
+import subprocess
 from datetime import date
 from thonny import get_workbench
 from thonny.languages import tr
@@ -92,9 +93,11 @@ def open_in_designer():
             try:
                 print("running ", f'"{location}" "{qt_ui_file}"', " ...")
                 if qt_ui_file=="":
-                    os.system(f'"{location}"')
+                    #os.system(f'"{location}"')
+                    subprocess.Popen ([f"{location}"])
                 else:
-                    os.system(f'"{location}" "{qt_ui_file}"')
+                    subprocess.Popen ([f"{location}" ,f"{qt_ui_file}"])
+                    #os.system(f'"{location}" "{qt_ui_file}"')
             except Exception as e:
                 print(f"Error: {e}")
         return True
