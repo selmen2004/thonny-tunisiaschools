@@ -1,6 +1,6 @@
 [project]
 name = "thonny-tunisiaschools"
-version = "0.0.12"
+version = "0.0.13"
 description="A Thonny IDE plug-in that offers PyQt / QT / Python support for Tunisian computer science secondary teachers / students ."
 readme = "README.md"
 requires-python = ">=3.0"
