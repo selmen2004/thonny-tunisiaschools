@@ -53,8 +53,11 @@ class UiViewerPlugin(tk.Frame):
 
             # Extract geometry properties
             x, y, width, height = widget_geometry
-            widget_label = tk.Label(self, text=tr("Name") + ": "+properties.get("name") ,  bg="green", fg="white", font=("TkDefaultFont", 8))
-            widget_label.place(x=x, y=y - 20)
+            
+            if widget_class!="QWidget": #supprimer le label de Form
+                widget_label = tk.Label(self, text=tr("Name") + ": "+properties.get("name") ,  bg="green", fg="white", font=("TkDefaultFont", 8))
+                widget_label.place(x=x, y=y - 20)
+
             if widget_class == "QLabel":
                 # Create a label with the specified text, geometry, and font
                 label = tk.Label(self, text=widget_text)
