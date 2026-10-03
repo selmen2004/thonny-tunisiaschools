@@ -24,6 +24,5 @@ setup(
         "thonnycontrib.tunisiaschools": ["res/*"]
     },
     
-    py_modules=["tunisiaschools"],
     packages=["thonnycontrib.tunisiaschools"],
 )

@@ -8,11 +8,14 @@
 
 name: Upload Python Package
 
+# Le declencheur `push:` est retire : il faisait partir cette chaine a chaque
+# pousssee, y compris sur les branches de travail, et sa derniere etape publie
+# sur PyPI. Un push ne doit donc plus pouvoir déposer une version. La publication
+# reste attachee a l'evenement qui la decide vraiment — la sortie d'une release.
 on:
   release:
     types: [published]
-  push:
-  
+
 permissions:
   contents: read
   id-token: write
@@ -21,6 +24,7 @@ jobs:
   deploy:
 
     runs-on: ubuntu-latest
+    environment: pypi
 
     steps:
     - uses: actions/checkout@v3
