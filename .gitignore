@@ -1,4 +1,10 @@
-# Le paquet installe par Thonny : uniquement les .py et res/.
+# ── la construction du paquet publie ──────────────────────────────
+/dist
+/build
+/thonny_tunisiaschools.egg-info
+*.egg-info/
+
+# ── le paquet installe par Thonny : uniquement les .py et res/ ────
 __pycache__/
 *.pyc
 
@@ -6,5 +12,8 @@ __pycache__/
 
 # mais une sonde lancee depuis la RACINE du paquet y ecrit son _sortie, et la
 # ligne precedente de tests/ ne la regarde pas : sans celle-ci le dossier de
-# travail (gitprobe inclus, avec son .git) partirait avec le paquet installe
+# travail (gitprobe inclus, avec son .git) partirait avec le paquet installe.
+# La regle sans barre oblique initiale couvre la racine du depot comme
+# thonnycontrib/tunisiaschools/, l'endroit ou le paquet a ete descendu le
+# 2026-10-03.
 _sortie/
