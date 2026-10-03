@@ -1,0 +1,26 @@
+# Les fichiers du paquet sont charges par le Thonny local a travers une jonction
+# de dossier : ce dossier-ci EST le paquet installe. Sur cette machine
+# core.autocrlf=true est pose dans la configuration systemique de Git
+# (C:\Program Files\Git\etc\gitconfig), donc tout checkout ou reset reecrirait
+# les sources en CRLF. Les fixer ici protege a la fois le paquet et les suites
+# qui comparent des octets.
+
+* text=auto
+
+# les sources et les donnees que les suites lisent octet pour octet
+*.py  text eol=lf
+*.ui  text eol=lf
+*.md  text eol=lf
+*.txt text eol=lf
+*.toml text eol=lf
+*.cfg text eol=lf
+*.yml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# rien a convertir ici : ce sont des scripts Windows qui s'executent dans cmd.exe
+*.bat text eol=crlf
+
+# rien a convertir : ce sont des images
+*.png binary
+*.ico binary
