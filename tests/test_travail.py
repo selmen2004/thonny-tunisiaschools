@@ -30,13 +30,15 @@ import sys
 import types
 from xml.etree import ElementTree as ET
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 # TUNISIASCHOOLS_COPIE : le dossier d'une COPIE mutee du paquet, pose par
 # tests\mutants_cible.py. Sans lui, c'est le module livre qui est teste. La
 # section 8 lit les sources de PLUGIN : si elle lisait le fichier livre pendant
 # qu'un mutant est vise, ses pins ne verraient jamais la faute.
 PLUGIN = os.environ.get("TUNISIASCHOOLS_COPIE") or \
-    r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+    chemins.PAQUET
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 sys.path.insert(0, PLUGIN)

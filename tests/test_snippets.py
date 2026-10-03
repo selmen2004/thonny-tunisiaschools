@@ -11,9 +11,11 @@ import os
 import sys
 import types
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
-sys.path.insert(0, r"C:\Users\Selmen\Desktop\projects\tunisiaschools")
+sys.path.insert(0, chemins.PAQUET)
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 import UIViewer                                    # noqa: E402
@@ -154,7 +156,7 @@ check("le gestionnaire s'appelle comme le veut la convention du plugin",
       WIDGET_METHODS["QPushButton"][0][1])
 
 print("=== 4. QMessageBox a quitte l'editeur visuel ===")
-SRC = r"C:\Users\Selmen\Desktop\projects\tunisiaschools\UIViewer.py"
+SRC = os.path.join(chemins.PAQUET, "UIViewer.py")
 with open(SRC, encoding="utf-8") as fh:
     source = fh.read()
 check("UIViewer.py ne mentionne plus du tout QMessageBox",

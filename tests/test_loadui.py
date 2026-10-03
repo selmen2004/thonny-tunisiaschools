@@ -2,8 +2,10 @@
 import os
 import sys
 
+import chemins
+
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+BUNDLE = chemins.BUNDLE
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 HERE = os.path.dirname(os.path.abspath(__file__))
 

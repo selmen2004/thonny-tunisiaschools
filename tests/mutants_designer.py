@@ -16,12 +16,14 @@ import shutil
 import subprocess
 import sys
 
-RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import chemins
+
+RACINE = chemins.PAQUET
 SOURCE = os.path.join(RACINE, "__init__.py")
-SUITE = os.path.join(RACINE, "tests", "test_designer.py")
+SUITE = os.path.join(chemins.TESTS, "test_designer.py")
 # les copies mutilees et le fils qui les charge restent dans le tiroir ignore,
 # jamais a cote des suites versionnees
-ICI = os.path.join(RACINE, "tests", "_sortie", "mutants")
+ICI = os.path.join(chemins.TESTS, "_sortie", "mutants")
 MUTANTS = os.path.join(ICI, "copies")
 RUNNER = os.path.join(ICI, "_mut_run.py")
 

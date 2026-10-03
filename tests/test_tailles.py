@@ -52,11 +52,13 @@ import time
 import types
 from xml.etree import ElementTree as ET
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 # TUNISIASCHOOLS_COPIE : le dossier d'une COPIE mutee du module, pose par
 # tests\mutants_tailles.py. Sans lui, c'est le module livre qui est teste.
 PLUGIN = os.environ.get("TUNISIASCHOOLS_COPIE") or \
-    r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+    chemins.PAQUET
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(BUNDLE, "Lib", "site-packages")
 ENV = dict(os.environ, PYTHONIOENCODING="utf-8", QT_QPA_PLATFORM="offscreen")

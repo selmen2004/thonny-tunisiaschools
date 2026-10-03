@@ -33,9 +33,11 @@ import shutil
 import subprocess
 import sys
 
-RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import chemins
+
+RACINE = chemins.PAQUET
 SOURCE = os.path.join(RACINE, "__init__.py")
-TESTS = os.path.join(RACINE, "tests")
+TESTS = chemins.TESTS
 # les suites qui peuvent voir une cible detournee, dans cet ordre : la moins
 # chere d'abord, et on s'arrete des qu'une faute est vue. test_designer_live.py
 # n'est pas dans la liste : elle demarre un vrai processus et depend du poste

@@ -52,8 +52,10 @@ import tkinter as tk
 import types
 from tkinter import Tk
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
-PLUGIN = r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+import chemins
+
+BUNDLE = chemins.BUNDLE
+PLUGIN = chemins.PAQUET
 HERE = os.path.dirname(os.path.abspath(__file__))
 LAYOUT_UI = os.path.join(HERE, "designer_layout.ui")
 ABS_UI = os.path.join(HERE, "absolute.ui")

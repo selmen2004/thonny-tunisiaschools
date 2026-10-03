@@ -40,9 +40,11 @@ import shutil
 import subprocess
 import sys
 
-RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import chemins
+
+RACINE = chemins.PAQUET
 SOURCE = os.path.join(RACINE, "UIViewer.py")
-TESTS = os.path.join(RACINE, "tests")
+TESTS = chemins.TESTS
 # la suite proprietaire d'abord, puis les deux autres qui appellent _set_color :
 # la notation s'arrete des qu'une faute est vue.
 SUITES = ["test_couleurs.py", "test_effacement.py", "test_travail.py"]

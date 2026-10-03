@@ -33,8 +33,10 @@ import sys
 import tkinter as tk
 from tkinter import Tk
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
-PLUGIN = r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+import chemins
+
+BUNDLE = chemins.BUNDLE
+PLUGIN = chemins.PAQUET
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 sys.path.insert(0, PLUGIN)
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")

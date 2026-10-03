@@ -33,12 +33,14 @@ import subprocess
 import sys
 import time
 
-RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import chemins
+
+RACINE = chemins.PAQUET
 SOURCE = os.path.join(RACINE, "UIViewer.py")
-SUITE = os.path.join(RACINE, "tests", "test_tailles.py")
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+SUITE = os.path.join(chemins.TESTS, "test_tailles.py")
+BUNDLE = chemins.BUNDLE
 SITE = os.path.join(BUNDLE, "Lib", "site-packages")
-ICI = os.path.join(RACINE, "tests", "_sortie", "mutants_tailles")
+ICI = os.path.join(chemins.TESTS, "_sortie", "mutants_tailles")
 MUTANTS = os.path.join(ICI, "copies")
 RUNNER = os.path.join(ICI, "_mut_run.py")
 DELAI = 900

@@ -17,9 +17,11 @@ import sys
 import types
 from xml.etree import ElementTree as ET
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
-sys.path.insert(0, r"C:\Users\Selmen\Desktop\projects\tunisiaschools")
+sys.path.insert(0, chemins.PAQUET)
 
 for _name, _attrs in (("thonny", ("get_workbench",)),
                       ("thonny.languages", ("tr",))):

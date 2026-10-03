@@ -43,7 +43,9 @@ import shutil
 import sys
 import types
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 COPIE = os.environ.get("TUNISIASCHOOLS_COPIE")
 PKG = "thonnycontrib.tunisiaschools"
 HERE = os.path.dirname(os.path.abspath(__file__))

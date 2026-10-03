@@ -45,12 +45,14 @@ import time
 import types
 from xml.etree import ElementTree as ET
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 # La copie qu'un notateur de mutants (mutants_duplication.py) lui substitue :
 # le pere et le fils de mesure doivent lire le MEME produit, sinon la suite
 # jugerait le paquet livre pendant qu'on mute une copie.
 PLUGIN = os.environ.get("TUNISIASCHOOLS_COPIE") or \
-    r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+    chemins.PAQUET
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 sys.path.insert(0, PLUGIN)

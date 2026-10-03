@@ -2,8 +2,10 @@
 """Smoke test 7a : la garde de la mise en page, sans Tk."""
 import os, sys, types, xml.etree.ElementTree as ET
 
-PLUGIN = r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+PLUGIN = chemins.PAQUET
+BUNDLE = chemins.BUNDLE
 UIC = os.path.join(BUNDLE, "python.exe")
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 sys.path.insert(0, PLUGIN)

@@ -13,7 +13,9 @@ import io
 import os
 import sys
 
-PLUGIN = r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+import chemins
+
+PLUGIN = chemins.PAQUET
 FILES = ["__init__.py", "UIViewer.py"]
 
 FAILS = []

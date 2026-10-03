@@ -22,12 +22,14 @@ import io
 import os
 import sys
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-LIVE = os.path.dirname(HERE)      # le paquet sur lequel on travaille
+LIVE = chemins.PAQUET             # le paquet sur lequel on travaille
 TMP = HERE                        # les deux instantanes d'avant l'item 4 voyagent ici
 PAIRS = [("UIViewer.py", "tr_baseline_UIViewer.py"),
          ("__init__.py", "tr_baseline___init__.py")]

@@ -37,12 +37,14 @@ import sys
 import types
 from xml.etree import ElementTree as ET
 
-BUNDLE = r"C:\Users\Selmen\AppData\Local\Programs\Thonny"
+import chemins
+
+BUNDLE = chemins.BUNDLE
 # La copie sous contrat (mutants_couleurs.py) : sans cette ligne la suite
 # importerait le paquet vivant pendant qu'un grade examine une copie mutee, et
 # le verdict ne prouverait rien.
 PLUGIN = os.environ.get("TUNISIASCHOOLS_COPIE") or \
-    r"C:\Users\Selmen\Desktop\projects\tunisiaschools"
+    chemins.PAQUET
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(BUNDLE, "Lib", "site-packages"))
 sys.path.insert(0, PLUGIN)

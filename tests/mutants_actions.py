@@ -48,9 +48,11 @@ import shutil
 import subprocess
 import sys
 
-RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import chemins
+
+RACINE = chemins.PAQUET
 SOURCE = os.path.join(RACINE, "UIViewer.py")
-TESTS = os.path.join(RACINE, "tests")
+TESTS = chemins.TESTS
 SUITES = ["test_connexions.py"]
 ICI = os.path.join(TESTS, "_sortie", "mutants_actions")
 MUTANTS = os.path.join(ICI, "copies")
