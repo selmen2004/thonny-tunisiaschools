@@ -1,0 +1,24 @@
+# Contenu de ce dossier genere par les suites de tests.
+# Les seules richesses a suivre sont les .py et les fixtures .ui citees plus bas.
+
+__pycache__/
+*.log
+
+# dossiers de sortie crees a l'execution
+_sortie/
+live/
+tr_menu_sandbox/
+
+# tout fichier .ui est une sortie...
+*.ui
+*.ui.out
+*.ui2
+
+# ...sauf les fixtures que les tests lisent sans jamais les ecrire
+!absolute.ui
+!designer_hbox.ui
+!designer_layout.ui
+!hbox_ambigu.ui
+!herite_geometry_item.ui
+!msgbox_handwrite.ui
+!names_designer.ui

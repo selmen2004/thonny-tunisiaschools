@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>500</width><height>400</height></rect></property>
+  <property name="windowTitle"><string>Bac 2026</string></property>
+  <widget class="QLabel" name="titre">
+   <property name="geometry"><rect><x>20</x><y>15</y><width>200</width><height>30</height></rect></property>
+   <property name="text"><string>Bonjour</string></property>
+   <property name="font"><font><pointsize>12</pointsize><weight>75</weight><bold>true</bold><kerning>0</kerning></font></property>
+  </widget>
+  <widget class="QPushButton" name="ok">
+   <property name="geometry"><rect><x>20</x><y>60</y><width>90</width><height>26</height></rect></property>
+   <property name="text"><string>OK</string></property>
+   <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+  </widget>
+  <widget class="QLineEdit" name="saisie">
+   <property name="geometry"><rect><x>140</x><y>60</y><width>150</width><height>22</height></rect></property>
+  </widget>
+ </widget>
+ <resources/>
+</ui>

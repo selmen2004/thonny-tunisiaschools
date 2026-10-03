@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>90</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Barre d'outils</string>
+  </property>
+  <layout class="QHBoxLayout" name="topLayout">
+   <item>
+    <widget class="QPushButton" name="btnUn">
+     <property name="text">
+      <string>Un</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnDeux">
+     <property name="text">
+      <string>Deux</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnTrois">
+     <property name="text">
+      <string>Trois</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <includes/>
+</ui>

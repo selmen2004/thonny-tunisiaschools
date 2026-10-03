@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x><y>0</y><width>400</width><height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle"><string>Formulaire</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text"><string>Bouton </string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton2">
+     <property name="text"><string>Bouton 2</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton3">
+     <property name="text"><string>Bouton 3</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton4">
+     <property name="text"><string>Bouton 4</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton5">
+     <property name="text"><string>Bouton 5</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text"><string>Bonjour</string></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

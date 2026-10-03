@@ -1,0 +1,10 @@
+# Le paquet installe par Thonny : uniquement les .py et res/.
+__pycache__/
+*.pyc
+
+# les sorties des suites de tests sont ignorees par tests/.gitignore
+
+# mais une sonde lancee depuis la RACINE du paquet y ecrit son _sortie, et la
+# ligne precedente de tests/ ne la regarde pas : sans celle-ci le dossier de
+# travail (gitprobe inclus, avec son .git) partirait avec le paquet installe
+_sortie/
